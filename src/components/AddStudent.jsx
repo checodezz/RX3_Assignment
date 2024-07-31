@@ -84,6 +84,7 @@ const AddStudent = () => {
                 <div className="mb-3">
                   <input
                     type="text"
+                    required
                     className="form-control"
                     placeholder="Name"
                     value={name}
@@ -93,6 +94,9 @@ const AddStudent = () => {
                 <div className="mb-3">
                   <input
                     type="number"
+                    required
+                    min={5}
+                    max={100}
                     className="form-control"
                     placeholder="Age"
                     value={age}
@@ -135,7 +139,9 @@ const AddStudent = () => {
                   <>
                     <div className="mb-3">
                       <input
-                        type="text"
+                        type="number"
+                        min={10}
+                        max={100}
                         className="form-control"
                         value={attendance}
                         onChange={(e) => setAttendance(e.target.value)}
@@ -144,7 +150,9 @@ const AddStudent = () => {
                     </div>
                     <div className="mb-4">
                       <input
-                        type="text"
+                        type="number"
+                        min={1}
+                        max={100}
                         className="form-control"
                         value={marks}
                         onChange={(e) => setMarks(e.target.value)}
